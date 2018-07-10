@@ -1,12 +1,12 @@
 // REVERSE A STRING
 // ex. reverseString('hello') == 'olleh'
 
-//1
+// 1
 function reverseString(str) {
-    const strArray = str.split('');
-    strArray.reverse();
+  const strArray = str.split('');
+  strArray.reverse();
 
-    return strArray.join('');
+  return strArray.join('');
 }
 
 
