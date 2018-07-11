@@ -8,6 +8,7 @@ function reverseString1(str) {
     .reverse()
     .join('');
 }
+
 // 2 - for loop reversal (decremental)
 function reverseString2(str) {
   let reversedStr = '';
@@ -17,5 +18,15 @@ function reverseString2(str) {
   return reversedStr;
 }
 
-const output = reverseString2('pink_duck');
+// 3 - for loop reversal (incremental)
+function reverseString3(str) {
+  let reversedStr = '';
+  for (let i = 0; i < str.length; i += 1) {
+    reversedStr = str[i] + reversedStr;
+  }
+  return reversedStr;
+}
+
+
+const output = reverseString3('pink_duck');
 console.log(output);
