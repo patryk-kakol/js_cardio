@@ -13,3 +13,5 @@ function isPalindrom(str) {
 
 const result = isPalindrom('racecar');
 console.log(result);
+
+// this one isn't fun when after practicing string reversal
