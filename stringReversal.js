@@ -44,7 +44,7 @@ function reverseString4(str) {
   note: It would feel natural to get rid of parentheses and curly braces:
     str.split('').forEach(char => reversedStr = char + reversedStr);
   but then linter barks at me about arrow func returning assignment, what supposedly is wrong,
-  so let leave it long for now */
+  so let leave it like this for now */
 function reverseString5(str) {
   let reversedStr = '';
   str.split('').forEach((char) => {
@@ -53,12 +53,15 @@ function reverseString5(str) {
   return reversedStr;
 }
 
-// 6 - high order fuctions
+// 6 - high order fuctions, useful linter told me to make it arrow, that's my favorite
 function reverseString6(str) {
   return str.split('')
     .reduce((reversedStr, char) => char + reversedStr, '');
 }
 
-
-const output = reverseString6('pink_duck');
-console.log(output);
+console.log(reverseString1('pink_duck'));
+console.log(reverseString2('pink_duck'));
+console.log(reverseString3('pink_duck'));
+console.log(reverseString4('pink_duck'));
+console.log(reverseString5('pink_duck'));
+console.log(reverseString6('pink_duck'));
