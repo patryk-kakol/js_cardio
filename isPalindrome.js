@@ -1,6 +1,6 @@
 /* examples:
-  isPalindorme('level') = true
-  isPalindrome('duck') = false
+  isPalindorme('level') === true
+  isPalindrome('duck') === false
   basically string reversal with condition check */
 
 // 1 - most obvious choice
