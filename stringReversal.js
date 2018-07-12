@@ -29,7 +29,7 @@ function reverseString3(str) {
 
 /* 4 - es6 approach
   lesson here: according to eslint I should use "const char" in the loop, not "let char"
-  at first momemet I thought it won't work, because variable char changes, but ofc linter was right:
+  at first moment I thought it won't work, because variable char changes, but ofc linter was right:
   it is not being reassgined, but redeclared.
   Afterall linter also said the loops should be avoided in favor of array iterations... */
 function reverseString4(str) {
