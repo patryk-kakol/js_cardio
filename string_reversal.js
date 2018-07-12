@@ -55,9 +55,8 @@ function reverseString5(str) {
 
 // 6 - high order fuctions
 function reverseString6(str) {
-  return str.split('').reduce(function(reversedStr, char) {
-    return char + reversedStr;
-  }, '');
+  return str.split('')
+    .reduce((reversedStr, char) => char + reversedStr, '');
 }
 
 
