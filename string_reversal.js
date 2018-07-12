@@ -27,7 +27,7 @@ function reverseString3(str) {
   return reversedStr;
 }
 
-/* 4 - es6 aproach
+/* 4 - es6 approach
   lesson here: according to eslint I should use "const char" in the loop, not "let char"
   at first momemet I thought it won't work, because variable char changes, but ofc linter was right:
   it is not being reassgined, but redeclared.
@@ -53,6 +53,13 @@ function reverseString5(str) {
   return reversedStr;
 }
 
+// 6 - high order fuctions
+function reverseString6(str) {
+  return str.split('').reduce(function(reversedStr, char) {
+    return char + reversedStr;
+  }, '');
+}
 
-const output = reverseString5('pink_duck');
+
+const output = reverseString6('pink_duck');
 console.log(output);
