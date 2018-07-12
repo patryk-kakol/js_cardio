@@ -1,5 +1,5 @@
 // REVERSE A STRING
-// ex. reverseString('hello') == 'olleh'
+// ex. reverseString('hello') === 'olleh'
 
 // 1 - using reverse() is obvious
 function reverseString1(str) {
