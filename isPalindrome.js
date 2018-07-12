@@ -5,9 +5,10 @@
 
 // 1 - most obvious choice
 function isPalindrom(str) {
-  return str === str.split('')
+  const reversedStr = str.split('')
     .reverse()
     .join('');
+  return str === reversedStr;
 }
 
 const result = isPalindrom('racecar');
