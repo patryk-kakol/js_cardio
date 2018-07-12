@@ -1,5 +1,5 @@
 /* example:
-  reverseInt(1234) = 4321 */
+  reverseInt(1234) === 4321 */
 
 function reverseInt(int) {
   const reversedStr = int.toString()
