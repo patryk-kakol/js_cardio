@@ -27,6 +27,32 @@ function reverseString3(str) {
   return reversedStr;
 }
 
+/* 4 - es6 aproach
+  lesson here: according to eslint I should use "const char" in the loop, not "let char"
+  at first momemet I thought it won't work, because variable char changes, but ofc linter was right:
+  it is not being reassgined, but redeclared.
+  Afterall linter also said the loops should be avoided in favor of array iterations... */
+function reverseString4(str) {
+  let reversedStr = '';
+  for (const char of str) {
+    reversedStr = char + reversedStr;
+  }
+  return reversedStr;
+}
 
-const output = reverseString3('pink_duck');
+/* 5 - so array iteration naturally comes next,
+  note: It would feel natural to get rid of parentheses and curly braces:
+    str.split('').forEach(char => reversedStr = char + reversedStr);
+  but then linter barks at me about arrow func returning assignment, what supposedly is wrong,
+  so let leave it long for now */
+function reverseString5(str) {
+  let reversedStr = '';
+  str.split('').forEach((char) => {
+    reversedStr = char + reversedStr;
+  });
+  return reversedStr;
+}
+
+
+const output = reverseString5('pink_duck');
 console.log(output);
