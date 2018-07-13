@@ -24,7 +24,7 @@ function maxChar1(str) {
 
 
 /* 2 - previous one with ternary operator abuse
-- it's quite inappropriate especially in second expression 
+- it's quite inappropriate especially in second expression
   + unary operators to piss liner off :D */
 function maxChar2(str) {
   const sorted = str.split('').sort();
@@ -33,7 +33,7 @@ function maxChar2(str) {
   let maxIndex = 0;
 
   for (let i = 0; i < sorted.length; i++) {
-    sorted[i - 1] === sorted[i] ? () => counter++ : counter = 1;
+    sorted[i - 1] === sorted[i] ? counter++ : counter = 1;
     counter > maxCount ? (maxCount = counter, maxIndex = i) : 0;
   }
   return sorted[maxIndex];
@@ -41,8 +41,7 @@ function maxChar2(str) {
 
 /* 3 - counting all chars and then pick most frequent,
   quite confusing arror usage with ternary operator;
-  basicaly this and previous solution(2) look really bad in eslint eyes,
-  but it's even against unary operators (++) :( */
+  basicaly this and previous solution(2) look really bad in eslint eyes */
 function maxChar3(str) {
   const charMap = {};
   let maxCount = 0;
