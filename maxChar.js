@@ -49,6 +49,7 @@ function maxChar3(str) {
   str
     .split('')
     .forEach(char => (charMap[char] ? charMap[char]++ : charMap[char] = 1));
+
   for (const char in charMap) {
     charMap[char] > maxCount ? (maxCount++, maxChar = char) : 0;
   }
