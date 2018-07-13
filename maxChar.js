@@ -24,15 +24,16 @@ function maxChar1(str) {
 
 
 /* 2 - previous one with ternary operator abuse
-- it's quite inappropriate especially in second expression */
+- it's quite inappropriate especially in second expression 
+  + unary operators to piss liner off :D */
 function maxChar2(str) {
   const sorted = str.split('').sort();
   let counter = 1;
   let maxCount = 1;
   let maxIndex = 0;
 
-  for (let i = 0; i < sorted.length; i += 1) {
-    sorted[i - 1] === sorted[i] ? () => counter += 1 : counter = 1;
+  for (let i = 0; i < sorted.length; i++) {
+    sorted[i - 1] === sorted[i] ? () => counter++ : counter = 1;
     counter > maxCount ? (maxCount = counter, maxIndex = i) : 0;
   }
   return sorted[maxIndex];
@@ -57,7 +58,6 @@ function maxChar3(str) {
 
 /* 4 - solution no3, but done the way eslint like it, just for comparison
   another note: for..in are not liked; is array iterations always better? */
-
 function maxChar4(str) {
   const charMap = {};
   let maxCount = 0;
@@ -70,12 +70,14 @@ function maxChar4(str) {
       else charMap[char] = 1;
     });
 
-  Object.keys(charMap).forEach((key) => {
-    if (charMap[key] > maxCount) {
-      maxCount += 1;
-      maxChar = key;
-    }
-  });
+  Object
+    .keys(charMap)
+    .forEach((key) => {
+      if (charMap[key] > maxCount) {
+        maxCount += 1;
+        maxChar = key;
+      }
+    });
   return maxChar;
 }
 
