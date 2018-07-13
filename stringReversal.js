@@ -31,7 +31,7 @@ function reverseString3(str) {
   lesson here: according to eslint I should use "const char" in the loop, not "let char"
   at first moment I thought it won't work, because variable char changes, but ofc linter was right:
   it is not being reassgined, but redeclared.
-  Afterall linter also said the loops should be avoided in favor of array iterations... */
+  Afterall linter also is notifying that loops should be avoided in favor of array iterations... */
 function reverseString4(str) {
   let reversedStr = '';
   for (const char of str) {
