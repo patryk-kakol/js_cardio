@@ -19,16 +19,16 @@ function fizzBuzz1() {
   }
 }
 
-// 2 - little more fun 
+/* 2 - little more fun with ternary operators,
+  but no nesting according to linter */
 function fizzBuzz2() {
   for (let i = 1; i <= 100; i += 1) {
     let result = '';
     result += i % 3 === 0 ? 'Fizz' : '';
     result += i % 5 === 0 ? 'Buzz' : '';
-    result += result === '' ? i : '';
-    console.log(result);
+    console.log(result || i);
   }
 }
 
-//fizzBuzz1();
+// fizzBuzz1();
 fizzBuzz2();
