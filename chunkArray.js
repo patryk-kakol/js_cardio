@@ -4,13 +4,14 @@
 
 // 1
 function chunkArray1(arr, len) {
-  const chunked = [[]];
+  const chunked = [];
 
   arr.forEach((element) => {
-    if (chunked[chunked.length - 1].length < len) {
-      chunked[chunked.length - 1].push(element);
-    } else {
+    const last = chunked[chunked.length - 1];
+    if (!last || last.length === len) {
       chunked.push([element]);
+    } else {
+      last.push(element);
     }
   });
   return chunked;
