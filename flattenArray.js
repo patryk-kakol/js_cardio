@@ -18,7 +18,7 @@ function flattenArr3(arr) {
 
 /* 4 - join, split and map to numbers,
   good if nesting array things go to the next level,
-  where previous solution fail */
+  where previous solutions fail */
 function flattenArr4(arr) {
   return arr.join().split(',').map(a => +a);
 }
@@ -31,6 +31,3 @@ console.log(flattenArr1([1, [2, 3], [4, 5, 6], 7]));
 console.log(flattenArr2([1, [2, 3], [4, 5, 6], 7]));
 console.log(flattenArr3([1, [2, 3], [4, 5, 6], 7]));
 console.log(flattenArr4([1, [2, 3], [4, 5, 6], 7]));
-
-
-console.log(typeof ([1, 3, 4, [5, 6]]));
