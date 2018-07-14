@@ -20,7 +20,10 @@ function flattenArr3(arr) {
   good if nesting array things go to the next level,
   where previous solutions fail */
 function flattenArr4(arr) {
-  return arr.join().split(',').map(a => +a);
+  return arr
+    .join()
+    .split(',')
+    .map(a => +a || a);
 }
 
 console.log(flattenArr1([1, [2, 3], [4, [5], 6], 7]));
