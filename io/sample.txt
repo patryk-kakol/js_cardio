@@ -1,0 +1,7 @@
+dog is an animal
+cat is an animal
+cactus is plant
+maple is a plant
+bird is an animal
+duck is an super animal
+sundew is a plant that can take care about itself
