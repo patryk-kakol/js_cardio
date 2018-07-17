@@ -17,7 +17,7 @@ Book.prototype.getAge = function () {
 Book.prototype.revise = function (newYear) {
   this.year = newYear;
   this.revised = true;
-}
+};
 
 // instatiate an object
 const book1 = new Book('Book One', 'John Doe', '2013');
