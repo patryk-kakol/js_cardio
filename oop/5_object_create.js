@@ -17,9 +17,9 @@ book1.year = '2013';
 
 // other way
 const book2 = Object.create(bookProtos, {
-  title: {value: 'Book Two'},
-  author: {value: 'Jane Doe'},
-  year: {value: '2013'}
+  title: { value: 'Book Two' },
+  author: { value: 'Jane Doe' },
+  year: { value: '2016' },
 });
 
 console.log(book1.getSummary());
