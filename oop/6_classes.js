@@ -18,6 +18,10 @@ class Book {
     this.year = newYear;
     this.revised = true;
   }
+
+  static topBookStore() {
+    return 'Barnes & Noble';
+  }
 }
 
 
@@ -28,3 +32,4 @@ console.log(book1);
 console.log(book1.getSummary());
 book1.revise('2015');
 console.log(book1.getAge());
+console.log(Book.topBookStore());
